@@ -1,0 +1,6 @@
+.demo-content {
+    height: 760px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
