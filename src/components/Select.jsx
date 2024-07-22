@@ -1,11 +1,16 @@
+
+
 import '../styles/select.css'
 
-export default function Select(type = '') {
-    return(
-        <select className={`select ${type}`}>
-            <option value='one'>1</option>
-            <option value='two'>2</option>
-            <option value='three'>3</option>
-        </select>
-    )
-}
+
+export default function Select({ items, type = '' }) {
+    return (
+        <div className='select-wrapper'>
+            <select className={`select ${type}`}>
+                {items.map(item =>
+                    <option value={item.value}>{item.name}</option>
+                )}
+            </select>
+        </div>
+    );
+};
